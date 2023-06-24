@@ -2,3 +2,4 @@ easyocr
 streamlit
 openai
 SpeechRecognition
+pyaudio
