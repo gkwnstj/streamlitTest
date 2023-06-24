@@ -37,7 +37,7 @@ def process_image(file, tesseract_lang):   # we change the format of the languag
     text = reader.readtext(image, detail = 0, paragraph=True)
     st.text(text)
     return text
-"""
+
 def process_speech():
     r = sr.Recognizer()
     audio = ""
@@ -60,12 +60,6 @@ def process_speech():
         st.text("Your speech can not understand")
     except sr.RequestError as e:
         st.text("Request Error!; {0}".format(e))
-    return audio
-"""
-
-def process_speech():
-    audio = "what is it?"
-    st.text("Virtual Speech : What is it?")
     return audio
 
 
