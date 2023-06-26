@@ -72,7 +72,7 @@ def process_speech():
 def process_chatgpt(audio, text):
     # https://www.daleseo.com/chatgpt-python/
     #API 입력
-    openai.api_key = "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"
+    openai.api_key = st.secrets["api_key"]
     st.text("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")
     st.text(audio)
     st.text(text)
