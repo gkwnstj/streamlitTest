@@ -128,6 +128,6 @@ if uploaded_file is not None:
 if st.checkbox('Process Speech'):
     st.session_state.audio_text = process_speech()
 
-if st.checkbox('Process BardAPI'):
+if st.checkbox('Process ChaGPT_API'):
     process_chatgpt(st.session_state.audio_text, st.session_state.image_text)
 
