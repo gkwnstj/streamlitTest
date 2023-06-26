@@ -25,6 +25,7 @@ lang_map = {
 def process_image(file, tesseract_lang):   # we change the format of the language input later
     img = Image.open(file)
     st.image(img, caption="Uploaded Image", use_column_width=True)
+    st.text("Processing...")
     
     # Convert to RGB
     image = np.array(img)
@@ -98,7 +99,6 @@ if "image_text" not in st.session_state:
 
 if uploaded_file is not None:
     if st.checkbox('Process Image'):
-        st.text("Processing...")
         st.session_state.image_text = process_image(uploaded_file,tesseract_lang)
         st.text("Done!")
 
@@ -108,4 +108,3 @@ if uploaded_file is not None:
 if st.checkbox('Process ChatGPT_API'):
     st.text("Processing...")
     process_chatgpt(st.session_state.audio_text, st.session_state.image_text)
-    st.text("Done!")
