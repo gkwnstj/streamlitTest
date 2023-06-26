@@ -72,7 +72,8 @@ def process_speech():
 def process_chatgpt(audio, text):
     # https://www.daleseo.com/chatgpt-python/
     #API 입력
-    openai.api_key = st.secrets["api_key"]
+    openai.api_key = "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"
+    st.text("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")
     st.text(audio)
     st.text(text)
     input_text = ['한국어로 대답해줘. ']+ text + [audio]
