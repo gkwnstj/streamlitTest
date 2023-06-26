@@ -106,5 +106,4 @@ if uploaded_file is not None:
 #     st.session_state.audio_text = process_speech()
 
 if st.checkbox('Process ChatGPT_API'):
-    st.text("Processing...")
     process_chatgpt(st.session_state.audio_text, st.session_state.image_text)
