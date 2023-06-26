@@ -10,15 +10,17 @@ import os
 import speech_recognition as sr
 
 
+# Language List
+# https://www.jaided.ai/easyocr/
 
 lang_map = {
     "한국어": "ko",
     "영어": "en",
-    "스페인어": "spa",
-    "프랑스어": "fra",
-    "이탈리아어": "ita",
-    "태국어": "tha",
-    '일본어':'jpn'
+    "스페인어": "es",
+    "프랑스어": "fr",
+    "이탈리아어": "it",
+    "태국어": "th",
+    '일본어':'ja'
 
 }
 
@@ -86,7 +88,7 @@ image_text = ""
 audio_text = ""
    
 lang_choice = st.selectbox("Choose the language of the text", list(lang_map.keys()))
-tesseract_lang = [lang_map[lang_choice] , 'en']
+tesseract_lang = [lang_map[lang_choice] , 'en', 'fr']
 
 uploaded_file = st.file_uploader("Upload an image", type=['png', 'jpg'])
 
