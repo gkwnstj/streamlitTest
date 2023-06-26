@@ -35,7 +35,7 @@ def process_image(file, tesseract_lang):   # we change the format of the languag
             
     reader = easyocr.Reader(tesseract_lang) # this needs to run only once to load the model into memory
     text = reader.readtext(image, detail = 0, paragraph=True)
-    st.text(text)
+    # st.text(text)
     return text
 
 # def process_speech():
@@ -48,13 +48,13 @@ def process_chatgpt(audio, text):
     # https://www.daleseo.com/chatgpt-python/
     #API 입력
     openai.api_key = st.secrets["api_key"]
-    st.text("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")
-    st.text(audio)
-    st.text(text)
+    # st.text("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")
+    # st.text(audio)
+    # st.text(text)
     input_text = ['한국어로 대답해줘. ']+ text + [" -> 이 제품은 뭐야?"]
     input_text = ' '.join(input_text)
     # input_text = st.text_area(input_text)
-    st.text(input_text)
+    # st.text(input_text)
     
 
     model = "gpt-3.5-turbo" # https://platform.openai.com/docs/api-reference/chat/create
