@@ -1,6 +1,6 @@
 easyocr
-streamlit
-openai
+streamlit==1.19.0
+openai==0.27.0
 SpeechRecognition
 pyaudio
 pipwin
