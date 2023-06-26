@@ -38,28 +38,33 @@ def process_image(file, tesseract_lang):   # we change the format of the languag
     st.text(text)
     return text
 
-def process_speech():
-    r = sr.Recognizer()
-    audio = ""
-    with sr.Microphone() as source:
-        st.text("무엇을 도와드릴까요?")
-        try:
-            speech = r.listen(source)
-            time.sleep(5)
-            #noise 제거
-            r.adjust_for_ambient_noise(source)
-        except sr.WaitTimeoutError:
-            st.text("Timeout error occurred")
-            return ""
+# def process_speech():
+#     r = sr.Recognizer()
+#     audio = ""
+#     with sr.Microphone() as source:
+#         st.text("무엇을 도와드릴까요?")
+#         try:
+#             speech = r.listen(source)
+#             time.sleep(5)
+#             #noise 제거
+#             r.adjust_for_ambient_noise(source)
+#         except sr.WaitTimeoutError:
+#             st.text("Timeout error occurred")
+#             return ""
 
-    try:    
-        audio = r.recognize_google(speech, language="ko-KR")
-        st.text("Your speech thinks like\n " + audio)
+#     try:    
+#         audio = r.recognize_google(speech, language="ko-KR")
+#         st.text("Your speech thinks like\n " + audio)
         
-    except sr.UnknownValueError:
-        st.text("Your speech can not understand")
-    except sr.RequestError as e:
-        st.text("Request Error!; {0}".format(e))
+#     except sr.UnknownValueError:
+#         st.text("Your speech can not understand")
+#     except sr.RequestError as e:
+#         st.text("Request Error!; {0}".format(e))
+#     return audio
+
+def process_speech():
+    audio = "what is it?"
+    st.text("Virtual Speech : What is it?")
     return audio
 
 
