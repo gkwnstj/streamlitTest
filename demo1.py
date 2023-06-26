@@ -45,6 +45,7 @@ def process_image(file, tesseract_lang):   # we change the format of the languag
 
 
 def process_chatgpt(audio, text):
+    st.text("Processing...")
     # https://www.daleseo.com/chatgpt-python/
     #API 입력
     openai.api_key = st.secrets["api_key"]
