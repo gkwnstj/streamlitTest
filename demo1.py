@@ -88,7 +88,7 @@ image_text = ""
 audio_text = ""
    
 lang_choice = st.selectbox("Choose the language of the text", list(lang_map.keys()))
-tesseract_lang = [lang_map[lang_choice] , 'en', 'fr']
+tesseract_lang = [lang_map[lang_choice] , 'en']  # It is impossible to adjust much more than 2. We have to consider about the combination all of them
 
 uploaded_file = st.file_uploader("Upload an image", type=['png', 'jpg'])
 
