@@ -35,7 +35,6 @@ def process_image(file, tesseract_lang):   # we change the format of the languag
             
     reader = easyocr.Reader(tesseract_lang) # this needs to run only once to load the model into memory
     text = reader.readtext(image, detail = 0, paragraph=True)
-    # st.text(text)
     return text
 
 # def process_speech():
@@ -99,11 +98,14 @@ if "image_text" not in st.session_state:
 
 if uploaded_file is not None:
     if st.checkbox('Process Image'):
+        st.text("Processing...")
         st.session_state.image_text = process_image(uploaded_file,tesseract_lang)
+        st.text("Done!")
 
 # if st.checkbox('Process Speech'):
 #     st.session_state.audio_text = process_speech()
 
 if st.checkbox('Process ChatGPT_API'):
+    st.text("Processing...")
     process_chatgpt(st.session_state.audio_text, st.session_state.image_text)
-
+    st.text("Done!")
