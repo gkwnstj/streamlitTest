@@ -70,7 +70,7 @@ def process_speech():
             st.text("Request Error!; {0}".format(e))
     except:
         st.text("MiC Input Error")
-        st.text("Default Speech is 'what is it?'")
+        st.text("Default Input Speech is 'what is it?'")
         audio = [" -> 이 제품은 뭐야?"]
                 
     return audio
