@@ -138,7 +138,7 @@ if uploaded_file is not None:
         img = Image.open(uploaded_file)
         st.image(img, caption="Uploaded Image", use_column_width=True)
         # st.session_state.image_text = process_image(uploaded_file,[tesseract_lang, "en"])
-        for i in range(7):
+        for i in range(2):
             try:
                 b = st.session_state.image_text = process_image([lang_list[i], "en"])   # English is the global language, so it is adopted
                 # st.text(st.session_state.image_text)
