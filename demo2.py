@@ -153,8 +153,8 @@ if uploaded_file is not None:
 
         st.text("Done!")
 
-# if st.checkbox('Process Speech'):
-#     st.session_state.audio_text = process_speech()
+if st.checkbox('Process Speech'):
+    st.session_state.audio_text = process_speech()
 
 if st.checkbox('Process ChatGPT_API'):
     process_chatgpt(st.session_state.audio_text, [intp])#st.session_state.image_text)
