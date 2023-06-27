@@ -134,8 +134,8 @@ if uploaded_file is not None:
         st.session_state.image_text = process_image(uploaded_file,tesseract_lang)
         st.text("Done!")
 
-# if st.checkbox('Process Speech'):
-#     st.session_state.audio_text = process_speech()
+if st.checkbox('Process Speech'):
+    st.session_state.audio_text = process_speech()
 
 if st.checkbox('Process ChatGPT_API'):
     process_chatgpt(st.session_state.audio_text, st.session_state.image_text)
