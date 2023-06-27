@@ -89,7 +89,7 @@ def process_chatgpt(audio, text):
     input_text = ['한국어로 대답해줘. ']+ text + audio
     input_text = ' '.join(input_text)
     # input_text = st.text_area(input_text)
-    # st.text(input_text)
+    st.text(input_text)
     
 
     model = "gpt-3.5-turbo" # https://platform.openai.com/docs/api-reference/chat/create
